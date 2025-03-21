@@ -1,0 +1,73 @@
+{
+    "onset_columns": [
+        "Subject",
+        "SubjectID",
+        "GoEventList",
+        "MyLetter",
+        "Probe.RESP",
+        "Probe.RT",
+        "Probe.OnsetTime",
+        "IFISBlockList.Sample"
+    ],
+    "final_columns": [
+        "Target",
+        "SubjectID",
+        "MyLetter",
+        "Probe.RESP",
+        "Probe.RT",
+        "Probe.OnsetTime",
+        "Run",
+        "Trial",
+        "EprimeRunNumber",
+        "noGoTrial",
+        "135x"
+    ],
+    "fileIdentifier": "mhEvent*-raw.csv",
+    "remove_headers": 0,
+    "drop_rows_identifier": [
+        "GoEventList"
+    ],
+    "values_to_drop": [
+        [
+            null
+        ]
+    ],
+    "tasknum": 4,
+    "num_runs": 5,
+    "trials_per_run": 49,
+    "num_files_expected": 1,
+    "headers": [
+        "Subject",
+        "Session",
+        "DataFile.Basename",
+        "SessionDate",
+        "SessionTime",
+        "IFISBlockList.Sample",
+        "GoEventList",
+        "MyLetter",
+        "Probe.RT",
+        "Probe.RESP",
+        "Probe.ACC",
+        "Probe.RTTime",
+        "Probe.OnsetTime"
+    ],
+    "create_onsets": 1,
+    "ons_merge_file": "onset_files/gng_onsets.xlsx",
+    "ons_merge_cols": {
+        "left_on": [
+            "MyLetter",
+            "Run",
+            "Trial"
+        ],
+        "right_on": [
+            "MyLetter",
+            "EprimeRunNumber",
+            "Trial"
+        ]
+    },
+    "replace_dict": {
+        "Subject": "Target",
+        "IFISBlockList.Sample": "Run"
+    },
+    "output_file_name": "gng_events.csv"
+}

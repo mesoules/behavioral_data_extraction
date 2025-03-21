@@ -1,0 +1,54 @@
+{
+    "onset_columns": [
+        "Subject",
+        "SubjectID",
+        "List1.Sample",
+        "Procedure[SubTrial]",
+        "StimulusType",
+        "DrinkRating.RESP",
+        "DrinkRating.RT"
+    ],
+    "final_columns": [
+        "Target",
+        "SubjectID",
+        "Run",
+        "TrialType",
+        "StimulusType",
+        "DrinkRating.RESP",
+        "DrinkRating.RT"
+    ],
+    "fileIdentifier": "BrainismAlcohol*-raw.txt",
+    "remove_headers": 0,
+    "drop_rows_identifier": [
+        "Procedure[SubTrial]"
+    ],
+    "values_to_drop": [
+        [
+            null
+        ]
+    ],
+    "tasknum": 12,
+    "num_runs": 2,
+    "trials_per_run": 48,
+    "num_files_expected": 1,
+    "headers": [
+        "Subject",
+        "Session",
+        "DataFile.Basename",
+        "SessionDate",
+        "SessionTime",
+        "List1.Sample",
+        "Procedure[SubTrial]",
+        "Order",
+        "StimulusType",
+        "DrinkRating.RESP",
+        "DrinkRating.RT"
+    ],
+    "create_onsets": 0,
+    "replace_dict": {
+        "Subject": "Target",
+        "List1.Sample": "Run",
+        "Procedure[SubTrial]": "TrialType"
+    },
+    "output_file_name": "cuereactivity_events.csv"
+}
